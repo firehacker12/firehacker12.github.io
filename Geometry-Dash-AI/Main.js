@@ -1,8 +1,11 @@
 var Player;
+var Level;
 
 function setup() {
 	createCanvas(6000, 600);
 	Player = new PlayerFunction();
+	Level = new LevelFunction();
+	Level.generateSpikes();
 }
 
 function draw() {
@@ -10,6 +13,8 @@ function draw() {
 	Ground();
 	Player.show();
 	Player.update();
+	Level.show();
+	Level.moveLevel();
 }
 
 function keyPressed() {
