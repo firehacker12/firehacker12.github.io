@@ -6,8 +6,8 @@ function Ground() {
 function LevelFunction() {
 	var Spikes = [];
 	var Speed = 10;
-	var x = width/2;
-	var y = height/2+180;
+	var x = 600;
+	var y = height/2+200;
 	this.generateSpikes = function() {
 		for (var i=0; i<10; i++) {
 			Spikes[i] = createVector(x, y);
@@ -22,7 +22,7 @@ function LevelFunction() {
 	this.show = function() {
 		for (var i=0; i<Spikes.length; i++) {
 			fill(100, 0, 100);
-			triangle(Spikes[i].x, Spikes[i].y, Spikes[i].x+20, Spikes[i].y, Spikes[i].x+10, Spikes[i].y+10);
+			triangle(Spikes[i].x, Spikes[i].y, Spikes[i].x+20, Spikes[i].y, Spikes[i].x+10, Spikes[i].y-10);
 		}
 	}
 }
