@@ -5,24 +5,4 @@ function Ground() {
 
 function MainLevel() {
 	var Spikes = [];
-	var Speed = 10;
-	var x = width/2;
-	var y = height/2+180;
-	this.generateSpikes = function() {
-		for (var i=0; i<10; i++) {
-			Spikes[i] = createVector(x, y);
-			x+=80;
-		}
-	}
-	this.moveLevel = function() {
-		for (var i=0; i<Spikes.length; i++) {
-			Spikes[i].x -= Speed;
-		}
-	}
-	this.show = function() {
-		for (var i=0; i<Spikes.length; i++) {
-			fill(100, 0, 100);
-			triangle(Spikes[i].x, Spikes[i].y, Spikes[i].x+20, Spikes[i].y, Spikes[i].x+10, Spikes[i].y+10);
-		}
-	}
 }
