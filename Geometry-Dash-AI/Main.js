@@ -5,7 +5,7 @@ function setup() {
 	createCanvas(6000, 600);
 	Player = new PlayerFunction();
 	Level = new LevelFunction();
-	GenerateLevel(2, 600, height/2+200, 50);
+	GenerateLevel(20, 600, height/2+200, 180);
 }
 
 function draw() {
