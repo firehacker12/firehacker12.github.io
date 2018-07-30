@@ -1,5 +1,5 @@
 function PlayerFunction() {
-	var Jumping = false;
+	this.jumping = false;
 	this.x = 30;
 	this.y = height/2+160;
 	var Gravity = 1;
@@ -9,7 +9,7 @@ function PlayerFunction() {
 		rect(this.x, this.y, 40, 40);
 	}
 	this.jump = function() {
-		if (!Jumping) {
+		if (!this.jumping) {
 			Velocity = -12;
 		}
 	}
