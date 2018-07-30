@@ -4,7 +4,7 @@ var Level;
 function setup() {
 	createCanvas(6000, 600);
 	Player = new PlayerFunction();
-	Level = new LevelFunction();
+	Level = new MainLevel();
 	Level.generateSpikes();
 }
 
