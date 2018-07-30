@@ -6,12 +6,10 @@ function Ground() {
 function LevelFunction() {
 	var Spikes = [];
 	var Speed = 10;
-	var x = 600;
-	var y = height/2+200;
-	this.generateSpikes = function() {
-		for (var i=0; i<10; i++) {
+	this.generateSpikes = function(NumberOfSpikes, x, y, Distance) {
+		for (var i=0; i<NumberOfSpikes; i++) {
 			Spikes[i] = createVector(x, y);
-			x+=200;
+			x+=Distance;
 		}
 	}
 	this.moveLevel = function() {
@@ -25,4 +23,8 @@ function LevelFunction() {
 			triangle(Spikes[i].x, Spikes[i].y, Spikes[i].x+40, Spikes[i].y, Spikes[i].x+20, Spikes[i].y-30);
 		}
 	}
+}
+
+function GenerateLevel() {
+	Level.generateSpikes(5, 600, height/2+200, 150);
 }
