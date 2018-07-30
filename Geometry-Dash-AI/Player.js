@@ -19,10 +19,10 @@ function PlayerFunction() {
 			this.y = height/2+160;
 		}
 		if (this.y == height/2+160) {
-			Jumping = false;
+			this.jumping = false;
 		}
 		else {
-			Jumping = true;
+			this.jumping = true;
 		}
 		Velocity+=0.5;
 	}
