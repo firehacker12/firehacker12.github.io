@@ -22,7 +22,7 @@ function LevelFunction() {
 	this.show = function() {
 		for (var i=0; i<Spikes.length; i++) {
 			fill(100, 0, 100);
-			triangle(Spikes[i].x, Spikes[i].y, Spikes[i].x+20, Spikes[i].y, Spikes[i].x+10, Spikes[i].y-40);
+			triangle(Spikes[i].x, Spikes[i].y, Spikes[i].x+20, Spikes[i].y, Spikes[i].x+20, Spikes[i].y-30);
 		}
 	}
 }
