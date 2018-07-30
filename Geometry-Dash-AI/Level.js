@@ -25,6 +25,6 @@ function LevelFunction() {
 	}
 }
 
-function GenerateLevel() {
-	Level.generateSpikes(5, 600, height/2+200, 150);
+function GenerateLevel(NumberOfSpikes, x, y, Distance) {
+	Level.generateSpikes(NumberOfSpikes, x, y, Distance);
 }
