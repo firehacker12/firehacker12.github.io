@@ -3,12 +3,12 @@ function Ground() {
 	rect(0, height/2+200, width, 20);
 }
 
-var Level[] = {0,1,1,0,0,0,1,0,0,0,1,1,1,1};
+var Level[] = {0,1,1,0,0,0,1,0,2,0,1,1,1,1};
 
 function LevelFunction() {
 	var Spikes = [];
 	var Speed = 5;
-	var Scale = 20;
+	var Scale = 40;
 	this.generateSpikes = function(NumberOfSpikes, x, y, Distance) {
 		for (var i=0; i<Level.length; i++) {
 			Spikes[i] = createVector(x, y);
@@ -23,7 +23,12 @@ function LevelFunction() {
 	this.show = function() {
 		for (var i=0; i<Spikes.length; i++) {
 			fill(100, 0, 100);
-			triangle(Spikes[i].x, Spikes[i].y, Spikes[i].x+40, Spikes[i].y, Spikes[i].x+20, Spikes[i].y-30);
+			if (Level[i] == 1) {
+				triangle(Spikes[i].x, Spikes[i].y, Spikes[i].x+40, Spikes[i].y, Spikes[i].x+20, Spikes[i].y-30);
+			}
+			else if (Level[i] == 2) {
+				rect(Spikes[i].x, Spikes[i].y, Scale, Scale);
+			}
 		}
 	}
 }
