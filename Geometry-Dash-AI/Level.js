@@ -3,7 +3,7 @@ function Ground() {
 	rect(0, height/2+200, width, 20);
 }
 
-var Level = [0, 0, 1, 1, 1, 2, 1, 0, 0];
+var Level = ["0", "0", "1", "1", "1", "2", "1", "0", "0"];
 
 
 
@@ -25,10 +25,10 @@ function LevelFunction() {
 	this.show = function() {
 		for (var i=0; i<Spikes.length; i++) {
 			fill(100, 0, 100);
-			if (Level[i] == 1) {
+			if (Level[i] == '1') {
 				triangle(Spikes[i].x, Spikes[i].y, Spikes[i].x+40, Spikes[i].y, Spikes[i].x+20, Spikes[i].y-30);
 			}
-			else if (Level[i] == 2) {
+			else if (Level[i] == '2') {
 				rect(Spikes[i].x, Spikes[i].y, Scale, Scale);
 			}
 		}
