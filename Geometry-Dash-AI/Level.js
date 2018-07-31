@@ -3,8 +3,7 @@ function Ground() {
 	rect(0, height/2+200, width, 20);
 }
 
-var Level = [];
-Level[] = {0, 1, 1, 2, 0, 0, 0, 1, 2};
+var Level = [0, 0, 1, 1, 1, 2, 1, 0, 0];
 
 
 
