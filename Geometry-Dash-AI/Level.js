@@ -3,13 +3,16 @@ function Ground() {
 	rect(0, height/2+200, width, 20);
 }
 
+var Level[] = {0,1,1,0,0,0,1,0,0,0,1,1,1,1};
+
 function LevelFunction() {
 	var Spikes = [];
 	var Speed = 5;
+	var Scale = 20;
 	this.generateSpikes = function(NumberOfSpikes, x, y, Distance) {
-		for (var i=0; i<NumberOfSpikes; i++) {
+		for (var i=0; i<Level.length; i++) {
 			Spikes[i] = createVector(x, y);
-			x+=Distance;
+			x+=Scale;
 		}
 	}
 	this.moveLevel = function() {
@@ -26,5 +29,5 @@ function LevelFunction() {
 }
 
 function GenerateLevel(NumberOfSpikes, x, y, Distance) {
-	Level.generateSpikes(NumberOfSpikes, x, y, Distance);
+	Level.generateSpikes(Level.length, x, y, Distance);
 }
