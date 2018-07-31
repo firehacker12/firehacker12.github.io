@@ -3,7 +3,10 @@ function Ground() {
 	rect(0, height/2+200, width, 20);
 }
 
-var Level[] = {0,1,1,0,0,0,1,0,2,0,1,1,1,1};
+var Level = [];
+Level[] = {0, 1, 1, 2, 0, 0, 0, 1, 2};
+
+
 
 function LevelFunction() {
 	var Spikes = [];
