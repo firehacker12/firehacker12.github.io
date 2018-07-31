@@ -5,7 +5,7 @@ function Ground() {
 
 function LevelFunction() {
 	var Spikes = [];
-	var Speed = 10;
+	var Speed = 5;
 	this.generateSpikes = function(NumberOfSpikes, x, y, Distance) {
 		for (var i=0; i<NumberOfSpikes; i++) {
 			Spikes[i] = createVector(x, y);
