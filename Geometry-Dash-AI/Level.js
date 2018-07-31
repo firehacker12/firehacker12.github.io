@@ -29,7 +29,7 @@ function LevelFunction() {
 				triangle(Spikes[i].x, Spikes[i].y, Spikes[i].x+40, Spikes[i].y, Spikes[i].x+20, Spikes[i].y-30);
 			}
 			else if (Level[i] == '2') {
-				rect(Spikes[i].x, Spikes[i].y, Scale, Scale);
+				rect(Spikes[i].x, Spikes[i].y+40, Scale, Scale);
 			}
 		}
 	}
