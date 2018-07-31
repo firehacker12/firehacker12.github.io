@@ -3,9 +3,14 @@ function Ground() {
 	rect(0, height/2+200, width, 20);
 }
 
-var Level = ['0', '0', '1', '1', '2', '1', '1', '2', '1', '0'];
+var Level = [];
 
-
+for (var i=0; i<30; i++) {
+	var Random = floor(random(0, 20));
+	if (Random <= 10) {Level[i] = 0;}
+	else if (Random <= 15 && Random >=11) {Level[i] = 1;}
+	else if (Random >= 16 && Random <=20) {Level[i] = 2;}
+}
 
 function LevelFunction() {
 	var Spikes = [];
