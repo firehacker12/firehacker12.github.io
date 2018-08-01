@@ -1,17 +1,20 @@
-var Player;
+var player;
 
 function setup() {
 	createCanvas(6000, 600);
-	Player = new PlayerFunction();
+	player = new Player();
 }
 
 function draw() {
 	background(37, 107, 219);
 	Ground();
-	Player.show();
+	player.show();
+
 	if (keyIsDown(32)) {
-		Player.jump();
-		console.log("Jumped");
+		player.jump();
 	}
-	Player.update();
+	player.update();
+
+
+
 }

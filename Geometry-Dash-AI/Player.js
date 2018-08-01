@@ -1,29 +1,41 @@
-function PlayerFunction() {
-	var Jumping = false;
-	this.x = 30;
-	this.y = height/2+160;
-	var Gravity = 1;
-	var Velocity = 1;
-	this.show = function() {
+class Player{
+	constructor() {
+		this.pos = createVector(30, height/2 + 160)
+		this.vel = createVector(0, 0)
+		this.gravity = 1;
+		this.acc = createVector(0, this.gravity*.1)
+		this.jumping = false;
+	}
+
+	show() {
 		fill(200, 0, 0);
-		rect(this.x, this.y, 40, 40);
+		rect(this.pos.x, this.pos.y, 40, 40);
 	}
-	this.jump = function() {
-		if (!Jumping) {
-			Velocity = -12;
+
+	jump() {
+		if (!this.jumping) {
+			this.vel.y = -12;
+			print('Jumped!')
 		}
 	}
-	this.update = function() {
-		this.y -= -Gravity-Velocity;
-		if (this.y >= height/2+160) {
-			this.y = height/2+160;
+
+	update() {
+		this.vel.add(this.acc)
+		this.pos.add(this.vel)
+
+		if (this.pos.y > height / 2 + 160) {
+			this.pos.y = height / 2 + 160;
 		}
-		if (this.y == height/2+160) {
-			Jumping = false;
+
+		if (this.pos.y == height / 2 + 160) {
+			this.jumping = false;
 		}
 		else {
-			Jumping = true;
+			this.jumping = true;
 		}
-		Velocity+=0.5;
+
+		this.vel.y += 0.5;
+	
 	}
 }
+
