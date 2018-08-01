@@ -3,7 +3,7 @@ function Ground() {
 	rect(0, height/2+200, width, 20);
 }
 
-var Level = [];
+var Level = [0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 2, 2, 1, 2, 1, 2, 1, 0, 1];
 
 var LevelLength = 20;
 
