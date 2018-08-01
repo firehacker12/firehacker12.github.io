@@ -9,12 +9,9 @@ function draw() {
 	background(37, 107, 219);
 	Ground();
 	Player.show();
-	Player.update();
-}
-
-function keyPressed() {
-	if (keyCode === 32) {
+	if (keyIsDown(32)) {
 		Player.jump();
 		console.log("Jumped");
 	}
+	Player.update();
 }
