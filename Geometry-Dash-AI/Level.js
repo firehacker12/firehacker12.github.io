@@ -9,7 +9,6 @@ var LevelLength = 20;
 
 function LevelFunction() {
 	var Speed = 5;
-	var Scale = 40;
 	this.generateSpikes = function(NumberOfSpikes, x, y, Distance) {
 		for (var i=0; i<LevelLength; i++) {
 			Spikes[i] = createVector(x, y);
