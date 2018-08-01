@@ -8,7 +8,6 @@ var Level = [];
 var LevelLength = 20;
 
 function LevelFunction() {
-	var Spikes = [];
 	var Speed = 5;
 	var Scale = 40;
 	this.generateSpikes = function(NumberOfSpikes, x, y, Distance) {
