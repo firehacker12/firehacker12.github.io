@@ -1,6 +1,7 @@
 var Player;
 var Level;
 var Spikes = [];
+var Scale = 40;
 
 function setup() {
 	createCanvas(6000, 600);
