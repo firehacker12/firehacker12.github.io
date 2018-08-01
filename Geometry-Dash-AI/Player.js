@@ -11,6 +11,7 @@ function PlayerFunction() {
 	this.jump = function() {
 		if (!this.jumping) {
 			Velocity = -12;
+			print('Jumped!')
 		}
 	}
 	this.update = function() {

@@ -21,13 +21,9 @@ function draw() {
 	Ground();
 	Player.show();
 	Player.update();
+	if (keyIsDown(32)) {
+		Player.jump();
+	}
 	Level.show();
 	Level.moveLevel();
-}
-
-function keyPressed() {
-	if (keyCode === 32) {
-		Player.jump();
-		console.log("Jumped");
-	}
 }
