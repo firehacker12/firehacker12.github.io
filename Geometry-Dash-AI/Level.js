@@ -3,9 +3,14 @@ function Ground() {
 	rect(0, height/2+200, width, 20);
 }
 
-var Level = [0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 2, 2, 1, 2, 1, 2, 1, 0, 1];
+var Level = [];
 
 var LevelLength = 20;
+
+for (var i=0; i<LevelLength; i++) {
+	var Random = ceil(random(0, 3));
+	Level[i] = Random;
+}
 
 function LevelFunction() {
 	var Speed = 5;
