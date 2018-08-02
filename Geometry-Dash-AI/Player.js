@@ -29,7 +29,7 @@ function PlayerFunction() {
 			for (var i=0; i<LevelLength; i++) {
 				if (Spikes[i].x>=this.x && Spikes[i].x+Scale<=this.x) {
 					if (this.y >= Spikes[i].y) {
-						this.y -= Gravity-Velocity;	
+						//this.y -= Gravity-Velocity;	
 					}
 					if (this.y == Spikes[i].y) {
 						this.y = Spikes[i].y-Scale;	
