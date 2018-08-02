@@ -27,6 +27,7 @@ function draw() {
 	Ground();
 	Player.show();
 	Player.update();
+	Player.detectCollision();
 	if (keyIsDown(32)) {
 		Player.jump();
 	}
