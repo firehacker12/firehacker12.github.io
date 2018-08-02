@@ -16,6 +16,15 @@ function PlayerFunction() {
 	}
 	this.update = function() {
 		this.y -= -Gravity-Velocity;
+		if (this.y == height/2+160) {
+			this.jumping = false;
+		}
+		else {
+			this.jumping = true;
+		}
+		Velocity+=0.5;
+	}
+	this.detectCollision = function() {
 		if (this.y <= height/2+160) {
 			for (var i=0; i<LevelLength; i++) {
 				if (Spikes[i].x>=this.x && Spikes[i].x+Scale<=this.x) {
@@ -31,12 +40,5 @@ function PlayerFunction() {
 				}
 			}
 		}
-		if (this.y == height/2+160) {
-			this.jumping = false;
-		}
-		else {
-			this.jumping = true;
-		}
-		Velocity+=0.5;
 	}
 }
