@@ -15,6 +15,11 @@ function setup() {
 		else if (Random <= 15 && Random >=11) {Level[i] = 1;}
 		else if (Random >= 16 && Random <=20) {Level[i] = 2;}
 	}*/
+	
+	for (var i=0; i<LevelLength; i++) {
+		var Random = ceil(random(0, 3));
+		Level[i] = Random;
+	}
 }
 
 function draw() {
