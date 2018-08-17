@@ -42,11 +42,7 @@ var TOWERBLACKIMAGE;
 var TOWERWHITEIMAGE;
 
 
-
-
-function setup() {
-	createCanvas(canvasWidth, canvasHeight);
-	db = new drawBoard();
+function preload() {
 	BISHOPBLACKIMAGE = loadImage("Assets/BISHOPBLACK.png");
 	BISHOPWHITEIMAGE = loadImage("Assets/BISHOPBWHITE.png");
 	KINGBLACKIMAGE = loadImage("Assets/KINGBLACK.png");
@@ -59,6 +55,11 @@ function setup() {
 	QUEENWHITEIMAGE = loadImage("Assets/QUEENWHITE.png");
 	TOWERBLACKIMAGE = loadImage("Assets/TOWERBLACK.png");
 	TOWERWHITEIMAGE = loadImage("Assets/TOWERWHITE.png");
+}
+
+function setup() {
+	createCanvas(canvasWidth, canvasHeight);
+	db = new drawBoard();
 }
 
 function draw() {
