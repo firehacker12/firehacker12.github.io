@@ -9,7 +9,7 @@ var Critical = 5;
 var TimeScore = 0;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
   RandomTime = floor(random(10, Time));
   GenerateTarget();
 }
