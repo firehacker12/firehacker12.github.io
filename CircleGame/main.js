@@ -57,7 +57,7 @@ function mouseClicked() {
 }
 
 function Restart() {
-  if (TimeScore > HighScore) {
+  if (TimeScore < HighScore) {
     HighScore = TimeScore;
   }
   TimeScore = 0;
